@@ -1,0 +1,14 @@
+using UnityEngine;
+using Zenject;
+
+namespace #PROJECTNAME#.Game.Installer
+{
+	public class #NAME#Installer : MonoInstaller 
+	{
+		public override void InstallBindings()
+		{
+            Container.Bind<Model.#NAME#Model>().FromNew().AsCached();
+            Container.Bind<Presenter.#NAME#Presenter>().AsCached().NonLazy();
+		}
+	}
+}

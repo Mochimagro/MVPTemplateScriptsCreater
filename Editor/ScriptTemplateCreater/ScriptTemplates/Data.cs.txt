@@ -1,0 +1,18 @@
+using UnityEngine;
+using Zenject;
+
+namespace #PROJECTNAME#.Data
+{
+    [CreateAssetMenu(fileName = "#NAME#Data", menuName = "Installers/#NAME#Data")]
+    public class #NAME#Data :  ScriptableObjectInstaller<#NAME#Data>
+    {
+        [SerializeField] string _value = default;
+
+        public string Value { get => _value; }
+
+        public override void InstallBindings()
+        {
+            Container.Bind<InGameSampleData>().FromInstance(this).AsCached();
+        }
+    }
+}

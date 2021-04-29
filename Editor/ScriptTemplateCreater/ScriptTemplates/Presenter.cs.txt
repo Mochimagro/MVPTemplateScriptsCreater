@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+namespace #PROJECTNAME#.Game.Presenter
+{
+	using Model;
+	using View;
+	public class #NAME#Presenter
+	{
+		private #NAME#View _#NAMETOLOWER#View = null;
+		private #NAME#Model _#NAMETOLOWER#Model = null;
+
+		public #NAME#Presenter(#NAME#View view,#NAME#Model model) 
+		{
+			_#NAMETOLOWER#View = view ?? throw new ArgumentNullException(nameof(view));
+			_#NAMETOLOWER#Model = model ?? throw new ArgumentNullException(nameof(model));
+			#NOTRIM#
+			_#NAMETOLOWER#View.Sample(model.TextValue);
+			#NOTRIM#
+			Bind();
+		}
+		
+		private void Bind () 
+		{
+			#NOTRIM#
+		}
+	}
+}

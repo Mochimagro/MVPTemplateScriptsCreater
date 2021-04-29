@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+namespace #PROJECTNAME#.Game.Model
+{
+	public class #NAME#Model
+	{
+		string _textValue = default;
+		public string TextValue { get => _textValue; }
+
+		public #NAME#Model()
+		{
+			#NOTRIM#
+		}
+
+	}
+}
