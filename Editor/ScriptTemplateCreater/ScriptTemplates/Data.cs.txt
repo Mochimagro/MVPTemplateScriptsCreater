@@ -12,7 +12,7 @@ namespace #PROJECTNAME#.Data
 
         public override void InstallBindings()
         {
-            Container.Bind<InGameSampleData>().FromInstance(this).AsCached();
+            Container.Bind<#NAME#Data>().FromInstance(this).AsCached();
         }
     }
 }
