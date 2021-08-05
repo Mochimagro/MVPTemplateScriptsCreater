@@ -5,7 +5,13 @@ using UniRx;
 
 namespace #PROJECTNAME#.Game.Model
 {
-	public class #NAME#Model
+	public interface I#NAME#Model
+    {
+        string TextValue { get; }
+    }
+
+
+	public class #NAME#Model : I#NAME#Model
 	{
 		string _textValue = default;
 		public string TextValue { get => _textValue; }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace MVPTemplate.Game.Installer
+namespace MVPTemplateEditor.Game.Installer
 {
 	public class OutGameSampleInstaller : MonoInstaller 
 	{

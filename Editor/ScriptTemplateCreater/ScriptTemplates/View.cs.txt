@@ -8,8 +8,15 @@ using Zenject;
 
 namespace #PROJECTNAME#.Game.View
 {
+	
+	public interface I#NAME#View
+    {
+        void Sample(string value);
+
+	}
+
 	[RequireComponent(typeof(ZenjectBinding))]
-	public class #NAME#View : MonoBehaviour 
+	public class #NAME#View : MonoBehaviour ,I#NAME#View
 	{
 		[SerializeField] private Text _sampleText = null;
 

@@ -8,8 +8,14 @@ using Zenject;
 
 namespace MVPTemplate.Game.View
 {
+	public interface IInGameSampleView
+    {
+        void Sample(string value);
+
+	}
+
 	[RequireComponent(typeof(ZenjectBinding))]
-	public class InGameSampleView : MonoBehaviour 
+	public class InGameSampleView : MonoBehaviour ,IInGameSampleView
 	{
 		[SerializeField] private Text _sampleText = null;
 

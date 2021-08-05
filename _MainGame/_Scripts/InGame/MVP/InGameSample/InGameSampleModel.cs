@@ -5,7 +5,12 @@ using UniRx;
 
 namespace MVPTemplate.Game.Model
 {
-	public class InGameSampleModel
+	public interface IInGameSampleModel
+    {
+        string TextValue { get; }
+    }
+
+	public class InGameSampleModel : IInGameSampleModel
 	{
 		string _textValue = default;
 		public string TextValue { get => _textValue; }

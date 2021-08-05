@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace MVPTemplateEditor.Game.Component
 {
-	public interface ICommomSampleComponent
-    {
+	public interface IInGameSampleComponent
+	{
 		void Init();
     }
 
 
-	public class CommomSampleComponent : MonoBehaviour ,ICommomSampleComponent
+	public class InGameSampleComponent : MonoBehaviour ,IInGameSampleComponent
 	{
 		public void Init () 
 		{

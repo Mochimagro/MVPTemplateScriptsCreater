@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplate.Game.Model
+namespace MVPTemplateEditor.Game.Model
 {
-	public class CommonSampleModel
+	public interface ICommonSampleModel
+    {
+        string TextValue { get; }
+    }
+
+
+	public class CommonSampleModel : ICommonSampleModel
 	{
 		string _textValue = default;
 		public string TextValue { get => _textValue; }

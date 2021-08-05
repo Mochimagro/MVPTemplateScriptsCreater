@@ -7,10 +7,16 @@ namespace MVPTemplate.Game.Presenter
 {
 	using Model;
 	using View;
-	public class InGameSamplePresenter
+
+	public interface IIngameSamplePresenter
+    {
+
+    }
+
+	public class InGameSamplePresenter : IIngameSamplePresenter
 	{
-		private InGameSampleView _inGameSampleView = null;
-		private InGameSampleModel _inGameSampleModel = null;
+		private IInGameSampleView _inGameSampleView = null;
+		private IInGameSampleModel _inGameSampleModel = null;
 
 		public InGameSamplePresenter(InGameSampleView view,InGameSampleModel model) 
 		{

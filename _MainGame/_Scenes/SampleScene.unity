@@ -308,8 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers:
-  - {fileID: 0}
+  _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 1186712743}
   _installerPrefabs: []
@@ -487,7 +486,7 @@ MonoBehaviour:
   _components:
   - {fileID: 1186712741}
   _identifier: 
-  _useSceneContext: 0
+  _useSceneContext: 1
   _context: {fileID: 0}
   _bindType: 0
 --- !u!114 &1186712743

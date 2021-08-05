@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplate.Game.Presenter
+namespace MVPTemplateEditor.Game.Presenter
 {
 	using Model;
 	using View;

@@ -6,10 +6,17 @@ using UniRx;
 using UnityEngine.UI;
 using Zenject;
 
-namespace MVPTemplate.Game.View
+namespace MVPTemplateEditor.Game.View
 {
+	
+	public interface ICommonSampleView
+    {
+        void Sample(string value);
+
+	}
+
 	[RequireComponent(typeof(ZenjectBinding))]
-	public class CommonSampleView : MonoBehaviour 
+	public class CommonSampleView : MonoBehaviour ,ICommonSampleView
 	{
 		[SerializeField] private Text _sampleText = null;
 
