@@ -13,7 +13,7 @@ namespace #PROJECTNAME#.Game.Model
 
 	public class #NAME#Model : I#NAME#Model
 	{
-		string _textValue = default;
+		string _textValue = "Default";
 		public string TextValue { get => _textValue; }
 
 		public #NAME#Model()

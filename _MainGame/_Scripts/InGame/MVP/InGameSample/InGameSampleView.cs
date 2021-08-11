@@ -6,8 +6,9 @@ using UniRx;
 using UnityEngine.UI;
 using Zenject;
 
-namespace MVPTemplate.Game.View
+namespace MVPTemplateEditor.Game.View
 {
+	
 	public interface IInGameSampleView
     {
         void Sample(string value);

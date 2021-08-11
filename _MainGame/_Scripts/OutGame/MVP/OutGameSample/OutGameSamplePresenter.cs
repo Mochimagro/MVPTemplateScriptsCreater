@@ -9,16 +9,16 @@ namespace MVPTemplateEditor.Game.Presenter
 	using View;
 	public class OutGameSamplePresenter
 	{
-		private OutGameSampleView _outGameSampleView = null;
-		private OutGameSampleModel _outGameSampleModel = null;
+		private IOutGameSampleView outGameSampleView = null;
+		private IOutGameSampleModel outGameSampleModel = null;
 
-		public OutGameSamplePresenter(OutGameSampleView view,OutGameSampleModel model) 
+		public OutGameSamplePresenter(IOutGameSampleView view,IOutGameSampleModel model) 
 		{
-			_outGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
-			_outGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
+			outGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
+			outGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
 			
 
-			_outGameSampleView.Sample(model.TextValue);
+			outGameSampleView.Sample(outGameSampleModel.TextValue);
 			
 
 			Bind();

@@ -13,7 +13,7 @@ namespace MVPTemplateEditor.Game.Model
 
 	public class OutGameSampleModel : IOutGameSampleModel
 	{
-		string _textValue = default;
+		string _textValue = "Default";
 		public string TextValue { get => _textValue; }
 
 		public OutGameSampleModel()

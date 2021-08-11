@@ -3,28 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplate.Game.Presenter
+namespace MVPTemplateEditor.Game.Presenter
 {
 	using Model;
 	using View;
-
-	public interface IIngameSamplePresenter
-    {
-
-    }
-
-	public class InGameSamplePresenter : IIngameSamplePresenter
+	public class InGameSamplePresenter
 	{
-		private IInGameSampleView _inGameSampleView = null;
-		private IInGameSampleModel _inGameSampleModel = null;
+		private IInGameSampleView inGameSampleView = null;
+		private IInGameSampleModel inGameSampleModel = null;
 
-		public InGameSamplePresenter(InGameSampleView view,InGameSampleModel model) 
+		public InGameSamplePresenter(IInGameSampleView view,IInGameSampleModel model) 
 		{
-			_inGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
-			_inGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
+			inGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
+			inGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
 			
 
-			_inGameSampleView.Sample(model.TextValue);
+			inGameSampleView.Sample(inGameSampleModel.TextValue);
 			
 
 			Bind();
