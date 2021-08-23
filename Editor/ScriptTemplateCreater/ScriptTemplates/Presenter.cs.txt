@@ -7,17 +7,23 @@ namespace #PROJECTNAME#.Game.Presenter
 {
 	using Model;
 	using View;
-	public class #NAME#Presenter
+
+	public interface I#NAME#Presenter
 	{
-		private I#NAME#View #NAMETOLOWER#View = null;
-		private I#NAME#Model #NAMETOLOWER#Model = null;
+		
+	}
+
+	public class #NAME#Presenter : I#NAME#Presenter
+	{
+		private I#NAME#View _#NAMETOLOWER#View = null;
+		private I#NAME#Model _#NAMETOLOWER#Model = null;
 
 		public #NAME#Presenter(I#NAME#View view,I#NAME#Model model) 
 		{
-			#NAMETOLOWER#View = view ?? throw new ArgumentNullException(nameof(view));
-			#NAMETOLOWER#Model = model ?? throw new ArgumentNullException(nameof(model));
+			_#NAMETOLOWER#View = view ?? throw new ArgumentNullException(nameof(view));
+			_#NAMETOLOWER#Model = model ?? throw new ArgumentNullException(nameof(model));
 			#NOTRIM#
-			#NAMETOLOWER#View.Sample(#NAMETOLOWER#Model.TextValue);
+			_#NAMETOLOWER#View.Sample(_#NAMETOLOWER#Model.TextValue);
 			#NOTRIM#
 			Bind();
 		}

@@ -7,18 +7,24 @@ namespace MVPTemplateEditor.Game.Presenter
 {
 	using Model;
 	using View;
-	public class CommonSamplePresenter
+
+	public interface ICommonSamplePresenter
 	{
-		private ICommonSampleView commonSampleView = null;
-		private ICommonSampleModel commonSampleModel = null;
+		
+	}
+
+	public class CommonSamplePresenter : ICommonSamplePresenter
+	{
+		private ICommonSampleView _commonSampleView = null;
+		private ICommonSampleModel _commonSampleModel = null;
 
 		public CommonSamplePresenter(ICommonSampleView view,ICommonSampleModel model) 
 		{
-			commonSampleView = view ?? throw new ArgumentNullException(nameof(view));
-			commonSampleModel = model ?? throw new ArgumentNullException(nameof(model));
+			_commonSampleView = view ?? throw new ArgumentNullException(nameof(view));
+			_commonSampleModel = model ?? throw new ArgumentNullException(nameof(model));
 			
 
-			commonSampleView.Sample(commonSampleModel.TextValue);
+			_commonSampleView.Sample(_commonSampleModel.TextValue);
 			
 
 			Bind();
