@@ -5,8 +5,7 @@ using UniRx;
 
 namespace #PROJECTNAME#.Game.Presenter
 {
-	using Model;
-	using View;
+	using #NAME#;
 
 	public interface I#NAME#Presenter
 	{
@@ -22,8 +21,6 @@ namespace #PROJECTNAME#.Game.Presenter
 		{
 			_#NAMETOLOWER#View = view ?? throw new ArgumentNullException(nameof(view));
 			_#NAMETOLOWER#Model = model ?? throw new ArgumentNullException(nameof(model));
-			#NOTRIM#
-			_#NAMETOLOWER#View.Sample(_#NAMETOLOWER#Model.TextValue);
 			#NOTRIM#
 			Bind();
 		}

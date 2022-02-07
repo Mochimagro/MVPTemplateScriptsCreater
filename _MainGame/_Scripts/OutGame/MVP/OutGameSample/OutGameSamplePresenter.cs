@@ -5,8 +5,7 @@ using UniRx;
 
 namespace MVPTemplateEditor.Game.Presenter
 {
-	using Model;
-	using View;
+	using OutGameSample;
 
 	public interface IOutGameSamplePresenter
 	{
@@ -22,9 +21,6 @@ namespace MVPTemplateEditor.Game.Presenter
 		{
 			_outGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
 			_outGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
-			
-
-			_outGameSampleView.Sample(_outGameSampleModel.TextValue);
 			
 
 			Bind();

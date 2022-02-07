@@ -7,7 +7,7 @@ namespace MVPTemplateEditor.Game.Installer
 	{
 		public override void InstallBindings()
 		{
-            Container.BindInterfacesAndSelfTo<Model.InGameSampleModel>().FromNew().AsCached();
+            Container.BindInterfacesAndSelfTo<InGameSample.InGameSampleModel>().FromNew().AsCached();
             Container.BindInterfacesAndSelfTo<Presenter.InGameSamplePresenter>().AsCached().NonLazy();
 		}
 	}

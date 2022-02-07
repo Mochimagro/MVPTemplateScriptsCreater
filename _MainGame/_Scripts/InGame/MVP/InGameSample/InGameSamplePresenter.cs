@@ -5,8 +5,7 @@ using UniRx;
 
 namespace MVPTemplateEditor.Game.Presenter
 {
-	using Model;
-	using View;
+	using InGameSample;
 
 	public interface IInGameSamplePresenter
 	{
@@ -23,16 +22,20 @@ namespace MVPTemplateEditor.Game.Presenter
 			_inGameSampleView = view ?? throw new ArgumentNullException(nameof(view));
 			_inGameSampleModel = model ?? throw new ArgumentNullException(nameof(model));
 			
-
-			_inGameSampleView.Sample(_inGameSampleModel.TextValue);
-			
-
 			Bind();
 		}
 		
 		private void Bind () 
 		{
-			
+			_inGameSampleView.OnClickButton.Subscribe(_ =>
+			{
+				_inGameSampleModel.AddValue(1);
+			});
+
+			_inGameSampleModel.CountValue.Subscribe(value =>
+			{
+				_inGameSampleView.SampleText = $"{value}";
+			});
 
 		}
 	}

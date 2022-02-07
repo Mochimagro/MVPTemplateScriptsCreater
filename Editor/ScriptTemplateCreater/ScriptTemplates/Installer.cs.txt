@@ -7,7 +7,7 @@ namespace #PROJECTNAME#.Game.Installer
 	{
 		public override void InstallBindings()
 		{
-            Container.BindInterfacesAndSelfTo<Model.#NAME#Model>().FromNew().AsCached();
+            Container.BindInterfacesAndSelfTo<#NAME#.#NAME#Model>().FromNew().AsCached();
             Container.BindInterfacesAndSelfTo<Presenter.#NAME#Presenter>().AsCached().NonLazy();
 		}
 	}

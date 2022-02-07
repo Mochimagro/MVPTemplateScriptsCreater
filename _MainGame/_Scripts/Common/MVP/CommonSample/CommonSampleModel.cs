@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplateEditor.Game.Model
+namespace MVPTemplateEditor.Game.CommonSample
 {
 	public interface ICommonSampleModel
     {
-        string TextValue { get; }
+		
+
     }
 
 
 	public class CommonSampleModel : ICommonSampleModel
 	{
-		string _textValue = "Default";
-		public string TextValue { get => _textValue; }
-
 		public CommonSampleModel()
 		{
 			

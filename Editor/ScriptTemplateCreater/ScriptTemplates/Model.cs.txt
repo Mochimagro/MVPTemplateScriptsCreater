@@ -4,19 +4,16 @@ using System.Linq;
 using UnityEngine;
 using UniRx;
 
-namespace #PROJECTNAME#.Game.Model
+namespace #PROJECTNAME#.Game.#NAME#
 {
 	public interface I#NAME#Model
     {
-        string TextValue { get; }
+		#NOTRIM#
     }
 
 
 	public class #NAME#Model : I#NAME#Model
 	{
-		string _textValue = "Default";
-		public string TextValue { get => _textValue; }
-
 		public #NAME#Model()
 		{
 			#NOTRIM#

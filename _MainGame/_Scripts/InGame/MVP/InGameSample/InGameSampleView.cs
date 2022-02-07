@@ -6,29 +6,30 @@ using UniRx;
 using UnityEngine.UI;
 using Zenject;
 
-namespace MVPTemplateEditor.Game.View
+namespace MVPTemplateEditor.Game.InGameSample
 {
 	
 	public interface IInGameSampleView
     {
-        void Sample(string value);
-
+		string SampleText { set; }
+		IObservable<Unit> OnClickButton { get; }
 	}
 
 	[RequireComponent(typeof(ZenjectBinding))]
 	public class InGameSampleView : MonoBehaviour ,IInGameSampleView
 	{
 		[SerializeField] private Text _sampleText = null;
+		[SerializeField] private Button _sampleButton = null;
 
-		public void Init()
+        public string SampleText { set => _sampleText.text = value; }
+
+        public IObservable<Unit> OnClickButton => _sampleButton.OnClickAsObservable();
+
+        public void Init()
 		{
 			
 
 		}
 		
-		public void Sample(string value)
-        {
-			_sampleText.text = value;
-        }
 	}
 }

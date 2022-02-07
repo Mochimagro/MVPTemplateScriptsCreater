@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplateEditor.Game.Model
+namespace MVPTemplateEditor.Game.OutGameSample
 {
 	public interface IOutGameSampleModel
     {
-        string TextValue { get; }
+		
+
     }
 
 
 	public class OutGameSampleModel : IOutGameSampleModel
 	{
-		string _textValue = "Default";
-		public string TextValue { get => _textValue; }
-
 		public OutGameSampleModel()
 		{
 			

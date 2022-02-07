@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-namespace MVPTemplateEditor.Game.Model
+namespace MVPTemplateEditor.Game.InGameSample
 {
+	using Data;
 	public interface IInGameSampleModel
     {
-        string TextValue { get; }
+		void AddValue(int value);
+		IObservable<int> CountValue { get; }
     }
 
 
 	public class InGameSampleModel : IInGameSampleModel
 	{
-		string _textValue = "Default";
-		public string TextValue { get => _textValue; }
-
-		public InGameSampleModel()
+		IntReactiveProperty _countValue = null;
+        public IObservable<int> CountValue => _countValue;
+		
+		public InGameSampleModel(IInGameSampleData data)
 		{
-			
+			_countValue = new IntReactiveProperty(data.DefaultValue);
 
 		}
 
-	}
+        public void AddValue(int value)
+        {
+			_countValue.Value += value;
+        }
+    }
 }
