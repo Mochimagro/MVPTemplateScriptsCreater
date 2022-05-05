@@ -22,6 +22,7 @@ namespace #PROJECTNAME#.Game.Presenter
 			_#NAMETOLOWER#View = view ?? throw new ArgumentNullException(nameof(view));
 			_#NAMETOLOWER#Model = model ?? throw new ArgumentNullException(nameof(model));
 			#NOTRIM#
+			_#NAMETOLOWER#View.Init();
 			Bind();
 		}
 		

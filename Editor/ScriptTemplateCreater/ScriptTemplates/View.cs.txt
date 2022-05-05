@@ -8,7 +8,6 @@ using Zenject;
 
 namespace #PROJECTNAME#.Game.#NAME#
 {
-	using Component;
 	
 	public interface I#NAME#View
     {
